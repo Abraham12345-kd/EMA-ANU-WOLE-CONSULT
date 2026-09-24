@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | EMA & ANU-WOLE CONSULT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <nav class="navbar admin-navbar">
+
+            <a href="index.html" class="logo">
+                EMA & ANU-WOLE CONSULT
+            </a>
+
+            <a href="index.html" class="nav-button admin-nav-button">
+                View Website
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main class="admin-page">
+
+        <div class="admin-heading">
+
+            <p class="section-label">
+                ADMIN DASHBOARD
+            </p>
+
+            <button id="logout-button">Logout</button>
+
+            <h1>
+                Manage Properties
+            </h1>
+
+            <p>
+                Add, edit and manage available properties.
+            </p>
+
+        </div>
+
+
+        <!-- ADD PROPERTY -->
+
+        <section class="admin-form-section">
+
+            <h2>
+                Add New Property
+            </h2>
+
+            <form id="property-form">
+
+                <div class="form-group">
+
+                    <label for="property-name">
+                        Property Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="property-name"
+                        placeholder="e.g. Premium Residential Land"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="property-location"
+                        placeholder="e.g. Iyana Ipaja"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-price">
+                        Price
+                    </label>
+
+                    <input
+                        type="text"
+                        id="property-price"
+                        placeholder="e.g. ₦15,000,000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-size">
+                        Property Size
+                    </label>
+
+                    <input
+                        type="text"
+                        id="property-size"
+                        placeholder="e.g. 500 sqm"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="property-description"
+                        rows="5"
+                        placeholder="Describe the property..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-image">
+                       Property Images <span>(optional — you can select multiple)</span>
+                    </label>
+
+                    <input
+                        type="file"
+                        id="property-image"
+                        accept="image/*"
+                        multiple
+                     >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="property-video">
+                       Property Videos <span>(optional — you can select multiple)</span>
+                    </label>
+
+                    <input
+                       type="file"
+                       id="property-video"
+                       accept="video/*"
+                       multiple
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Add Property
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- CURRENT PROPERTIES -->
+
+        <section class="admin-properties">
+
+             <h2>Current Properties</h2>
+
+            <div id="admin-property-list">
+
+                <p>
+                    Loading properties...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 EMA & ANU-WOLE CONSULT.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
