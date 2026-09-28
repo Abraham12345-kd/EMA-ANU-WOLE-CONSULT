@@ -2604,3 +2604,43 @@ footer {
         font-size: 19px;
     }
 }
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.password-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0 !important;
+    padding-right: 50px;
+}
+
+.password-toggle {
+    position: absolute !important;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px !important;
+    height: 38px;
+    padding: 8px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: #64748b !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    background: transparent !important;
+    color: #0284c7 !important;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}

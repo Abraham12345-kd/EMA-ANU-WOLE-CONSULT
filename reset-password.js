@@ -98,3 +98,68 @@ form.addEventListener("submit", async (event) => {
     }, 1500);
 
 });
+
+function setupPasswordToggle(inputId, buttonId) {
+
+    const input =
+        document.querySelector(`#${inputId}`);
+
+    const button =
+        document.querySelector(`#${buttonId}`);
+
+    button.addEventListener("click", () => {
+
+        const isHidden =
+            input.type === "password";
+
+        input.type =
+            isHidden ? "text" : "password";
+
+        button.setAttribute(
+            "aria-label",
+            isHidden ? "Hide password" : "Show password"
+        );
+
+        button.innerHTML = isHidden
+            ? `
+                <svg
+                    class="eye-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M3 3l18 18"></path>
+                    <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8"></path>
+                    <path d="M9.9 4.2A10.7 10.7 0 0 1 12 4c6.5 0 10 8 10 8a17.5 17.5 0 0 1-3.1 4.4"></path>
+                    <path d="M6.6 6.6C3.7 8.4 2 12 2 12s3.5 8 10 8a10.7 10.7 0 0 0 4.1-.8"></path>
+                </svg>
+            `
+            : `
+                <svg
+                    class="eye-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+            `;
+    });
+}
+
+setupPasswordToggle(
+    "new-password",
+    "new-password-toggle"
+);
+
+setupPasswordToggle(
+    "confirm-password",
+    "confirm-password-toggle"
+);
